@@ -1,6 +1,7 @@
 ﻿using AreaCalculation.Classes.Abstracts;
 using System;
 using System.ComponentModel.DataAnnotations;
+using System.Linq;
 
 namespace AreaCalculation
 {
@@ -40,6 +41,18 @@ namespace AreaCalculation
 
 			return true;
 		}
+
+		/// <summary>
+		/// Является ли треугольник прямоугольным.
+		/// </summary>
+		/// <returns></returns>
+		public bool IsRightTriangle()
+		{
+			var sides = new[] { SideA, SideB, SideC }.OrderByDescending(x => x).ToArray();
+
+			return Math.Abs(sides[0] * sides[0] - (sides[1] * sides[1] + sides[2] * sides[2])) < 0.0001;
+		}
+
 
 		protected override double CalculateArea()
 		{

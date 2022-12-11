@@ -37,5 +37,14 @@ namespace UnitTests
 			Assert.True(Math.Abs(area - 100 * Math.PI) <= 0.001);
 
 		}
+
+
+		[Test]
+		public void PifagorTriangleIsRight()
+		{
+			var pifagorTriangle = new Triangle(3, 4, 5);
+
+			Assert.True(pifagorTriangle.IsRightTriangle());
+		}
 	}
 }
