@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AreaCalculation.Classes.Abstracts;
+using System;
 using System.ComponentModel.DataAnnotations;
 
 namespace AreaCalculation

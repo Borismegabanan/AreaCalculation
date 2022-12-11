@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace AreaCalculation
+namespace AreaCalculation.Classes.Abstracts
 {
 	/// <summary>
 	/// Интерфейс описания фигуры
@@ -47,7 +47,7 @@ namespace AreaCalculation
 		/// </summary>
 		/// <returns></returns>
 		protected abstract double CalculateArea();
-		
+
 		/// <summary>
 		/// Метод вычисления периметра фигуры.
 		/// </summary>
